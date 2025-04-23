@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Geek</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="light-mode">
+    <!--Header-->
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            <img id="logo" src="assets/thisgeeklogo.png" alt="This Geek Logo">
+        </a>
+
+        <nav class="nav">
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div id="hamburger" class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!--Hero Section-->
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1 class="fade-in-up">Welcome To This Geek</h1>
+                <p class="fade-in-up">Innovative IT & Cybersecurity solutions, made for the modern world.</p>
+                <button class="cta-btn fade-in-up" onclick="toggleChatbot()">Talk to Our Geek</button>
+            </div>
+        </section>
+    </main>
+
+    <!--Chatbot-->
+    <section id="chatbot" class="chatbot" style="display: none;">
+        <div class="chatbot-header">
+            <span>Chat with our Geek Assistant</span>
+            <button onclick="toggleChatbot()">X</button>
+        </div>
+        <div class="chatbot-body">
+            <div id="chat-box" class="chat-box"></div>
+            <textarea id="message-input" placeholder="Type your message..." rows="2"></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+
+    <!--Floating Icons-->
+    <div class="floating-controls">
+        <img id="theme-icon" class="floating-icon" src="assets/sun-unscreen.gif" alt="Toggle Theme">
+        <img id="chat-icon" class="floating-icon" src="assets/bot-unscreen.gif" alt="Chat Icon" onclick="toggleChatbot()">
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2025 This Geek | All rights reserved.</p>
+    </footer>
+    
+    
+</body>
+</html>
