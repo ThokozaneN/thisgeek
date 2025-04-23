@@ -265,6 +265,14 @@ body.dark-mode .floating-icon {
     background-color: #222;
 }
 
+img, button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img:focus, button:focus {
+    outline: none;
+}
+
 /*Footer*/
 footer {
     text-align: center;
