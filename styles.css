@@ -273,6 +273,105 @@ img:focus, button:focus {
     outline: none;
 }
 
+/*Services Section*/
+.services-section {
+    padding: 80px 20px;
+    background-color: var(--bg);
+    color: var(--text);
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    line-height: 1.4;
+}
+
+.services-section h2 strong {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+/*Services Grid*/
+.services-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/*Service Card*/
+.service-card {
+    background-color: var(--card);
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5);
+    box-shadow: 0 8px 24px rgba(0, 120, 255, 0.15);
+}
+
+/*Service Icon*/
+.service-card img {
+    height: 60px;
+    margin-bottom: 20px;
+    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.service-card img:hover {
+    box-shadow: 0 0 12px rgba(0, 120, 255, 0.6);
+    transform: scale(1.05);
+}
+
+/*Service Text*/
+.service-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-soft);
+}
+
+.service-card img, .service-card {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.service-card img:focus, .service-card:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+/*Initial state*/
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+}
+
+/*When in view*/
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /*Footer*/
 footer {
     text-align: center;
