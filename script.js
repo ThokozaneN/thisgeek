@@ -166,3 +166,31 @@ function getBotReply(message) {
     buttons: ["Pricing", "Services", "Contact"]
   };
 }
+
+function updateIconsForTheme(theme) {
+  const icons = document.querySelectorAll('img[data-light][data-dark]');
+  
+  icons.forEach(img => {
+    const newSrc = theme === 'dark' ? img.getAttribute('data-dark') : img.getAttribute('data-light');
+
+    // Only update if it's different to avoid flashing
+    if (img.src !== newSrc && newSrc) {
+      img.setAttribute('src', newSrc);
+    }
+  });
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      observer.unobserve(entry.target); // animate once
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+document.querySelectorAll('.scroll-reveal').forEach(el => {
+  observer.observe(el);
+});
